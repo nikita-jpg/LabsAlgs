@@ -111,6 +111,47 @@ long long int* TournamentSort(int arr[], int n) //Турнирная сорти�
 }
 //Конец турнирной сортировки
 
+long long int* ShakerSort(int arr[], int n) {
+	long long int arrRetur[2];
+	bool son = true;
+	int right = n;
+	int left = 1;
+	int i = 0;
+	int c = 0;
+	int m = 0;
+	do {
+		son = true;
+		for (i = left; i < right; i++) {
+			c++;
+			if (arr[i - 1] > arr[i]) {
+				swap(arr[i], arr[i - 1]);
+				m++;
+				son = false;
+			}
+		}
+		right--;
+		for (i = right; i = left; i--) {
+			c++;
+			if (arr[i] < arr[i - 1]) {
+				m++;
+				swap(arr[i], arr[i]);
+				son = false;
+			}
+		}
+	} while (son == false);
+
+	arrRetur[0] = 1;
+	for (int i = 0; i < n - 1; i++) {
+		if (arr[i] > arr[i + 1]) arrRetur[0] = 0;
+	}
+	arrRetur[1] = c + m;
+	return arrRetur;
+}
+
+
+
+
+
 
 long long int* InserationSort(int arr[], int n) //сортировка вставками
 {
@@ -228,19 +269,19 @@ bool Test() {
 }
 void Vivod(long long int arr[], string str, int n, clock_t times[]) {
 	cout << "Сортировка " << str << "    Средний случай" << endl;
-	cout << "Количество элементов     " << "Tэ(n)=C+M" << "T(n) " << endl;
-	for (long long int i = 0; i < 5; i++) cout << (i + 3) * 10000 << +"                    " << arr[i] << "    " << (float)(times[i] / CLOCKS_PER_SEC) << endl;
+	cout << "Количество элементов     " << "Tэ(n)=C+M" << "  T(n) " << endl;
+	for (int i = 0; i < 5; i++) cout << (i + 3) * 10000 << +"                    " << arr[i] << "    " << setprecision(3) <<(double)(times[i]) / CLOCKS_PER_SEC << endl;
 	cout << endl;
 
 
 	cout << "Сортировка " << str << "    Лучший случай" << endl;
-	cout << "Количество элементов     " << "Tэ(n)=C+M" << endl;
-	for (int i = 5; i < 10; i++) cout << (i - 2) * 10000 << "                    " << arr[i] << endl;
+	cout << "Количество элементов     " << "Tэ(n)=C+M" << "  T(n) " << endl;
+	for (int i = 5; i < 10; i++) cout << (i - 2) * 10000 << "                    " << arr[i] << "    " << setprecision(3) << (double)(times[i]) / CLOCKS_PER_SEC << endl;
 	cout << endl;
 
 	cout << "Сортировка " << str << "    Худший случай" << endl;
-	cout << "Количество элементов     " << "Tэ(n)=C+M" << endl;
-	for (int i = 10; i < 15; i++) cout << (i - 7) * 10000 << "                    " << arr[i] << endl;
+	cout << "Количество элементов     " << "Tэ(n)=C+M" << "  T(n) " << endl;
+	for (int i = 10; i < 15; i++) cout << (i - 7) * 10000 << "                    " << arr[i] << "    " << setprecision(3) << (double)(times[i]) / CLOCKS_PER_SEC << endl;
 	cout << endl << endl << endl << endl;
 }
 
@@ -284,7 +325,7 @@ int main()
 	else {
 		cout << "Введите номер желаемой сортировки" << endl;
 		cout << "Турнирная сортировка - 1" << endl;
-		cout << "Сортировка вставками - 2" << endl;
+		cout << "Шейкерная сортировка - 2" << endl;
 		cout << "Сортировка выбором - 3" << endl;
 		cin >> n;
 
@@ -320,19 +361,19 @@ int main()
 			Vivod(arrChange, "турнирная", 1, times);
 			break;
 
-		case 2://Сортировка вставками
+		case 2://Сортировка шейкерная
 			//Средний случай
 			for (int i = 0; i < 5; i++) {
 				arr7 = random(array7, (i + 3) * 10000);
 				startTime = clock();
-				arrChange[i] = InserationSort(arr7, (i + 3) * 10000)[1];
+				arrChange[i] = ShakerSort(arr7, (i + 3) * 10000)[1];
 				times[i] = clock() - startTime;
 			}
 
 			//Лучший случай
 			for (int i = 5; i < 10; i++) {
 				startTime = clock();
-				arrChange[i] = InserationSort(arr7, (i - 2) * 10000)[1];
+				arrChange[i] = ShakerSort(arr7, (i - 2) * 10000)[1];
 				times[i] = clock() - startTime;
 			}
 
@@ -340,11 +381,11 @@ int main()
 			for (int i = 10; i < 15; i++) {
 				Reverse(arr7, (i - 7) * 10000);
 				startTime = clock();
-				arrChange[i] = InserationSort(arr7, (i - 7) * 10000)[1];
+				arrChange[i] = ShakerSort(arr7, (i - 7) * 10000)[1];
 				times[i] = clock() - startTime;
 			}
 
-			Vivod(arrChange, "вставками", 1, times);
+			Vivod(arrChange, "шейкерная", 1, times);
 			break;
 
 		case 3://Сортировка выбором

@@ -1,12 +1,13 @@
 ﻿  AlgsLaba2.cpp
 C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(101,31): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(148,6): warning C4101: i: неиспользованная локальная переменная
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(147,6): warning C4101: key: неиспользованная локальная переменная
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(179,6): warning C4101: i: неиспользованная локальная переменная
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(180,16): warning C4101: arrRetur: неиспользованная локальная переменная
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(178,6): warning C4101: key: неиспользованная локальная переменная
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(248,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(143): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(189,6): warning C4101: i: неиспользованная локальная переменная
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(188,6): warning C4101: key: неиспользованная локальная переменная
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(220,6): warning C4101: i: неиспользованная локальная переменная
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(221,16): warning C4101: arrRetur: неиспользованная локальная переменная
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(219,6): warning C4101: key: неиспользованная локальная переменная
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(289,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(109): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
-C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(174): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(148): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(184): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
+C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\AlgsLaba2\AlgsLaba2.cpp(215): warning C4172: возвращение адреса локальной или временной переменной : arrRetur
   AlgsLaba2.vcxproj -> C:\Users\Nikita\Desktop\Samsung\GitHub\LabsAlgs\AlgsLaba2\Debug\AlgsLaba2.exe
